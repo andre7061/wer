@@ -1,0 +1,56 @@
+.conteiner{
+    box-sizing: border-box;
+    max-width: 200px;
+    margin: 100px auto;
+    position: relative;
+}
+.base-timer {
+    position: relative;
+    height: 200px;
+    width: 200px;
+  }
+  
+  /* Удаляем стили SVG, которые могли бы скрыть временную метку */
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  /* Контур SVG, который отображает прогресс времени */
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  .base-timer__path-remaining {
+    /* Такая же ширина, что и у исходного кольца */
+    stroke-width: 7px;
+  
+    /* Замыкаем концы линии, чтобы создать круг */
+    stroke-linecap: round;
+  
+    /* Делаем так, чтобы анимация начиналась вверху */
+    transform: rotate(90deg);
+    transform-origin: center;
+  
+    /* Одна секунда подгоняется под таймер обратного отсчета */
+    transition: 1s linear all;
+  
+    /* Задаем смену цвета кольца, когда обновляется значение цвета */
+    stroke: green;
+  }
+  .conteiner__span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 34px;
+
+  }
+
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .base-timer__path-remaining_activ{
+    stroke: grey;
+  }
