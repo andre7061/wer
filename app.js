@@ -27,7 +27,7 @@ const getTaimer = (times) => {
 
             circle.setAttribute("stroke-dashoffset", w);
             if (minute == times) {
-                
+                document.querySelectorAll('.spinner-border').forEach(el=>el.classList.add('conteiner__span_activ'))
                 clearInterval(idInterval)
                 circle.classList.add('base-timer__path-remaining_activ')
             }
@@ -35,4 +35,4 @@ const getTaimer = (times) => {
     }
 }
 
-getTaimer(3)
+getTaimer(2)

@@ -54,3 +54,6 @@
   .base-timer__path-remaining_activ{
     stroke: grey;
   }
+  .conteiner__span_activ{
+    display: none;
+  }
