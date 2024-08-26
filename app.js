@@ -31,8 +31,8 @@ const getTaimer = (times) => {
                 clearInterval(idInterval)
                 circle.classList.add('base-timer__path-remaining_activ')
             }
-        }, 100)
+        }, 1000)
     }
 }
 
-getTaimer(2)
+getTaimer(1)
